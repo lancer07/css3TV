@@ -1,0 +1,452 @@
+.tv {
+  width: 640px;
+  margin: 0px auto;
+  position: relative;
+}
+.tv .antenna {
+  width: 2px;
+  height: 200px;
+  background: #61605f;
+  transform: rotate(225deg);
+  left: 300px;
+  position: absolute;
+}
+.tv .antenna span {
+  width: 4px;
+  height: 100px;
+  background: #6a6a6a;
+  display: block;
+  margin-left: -1px;
+}
+.tv .antenna strong {
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background: #61605f;
+  position: absolute;
+  left: -2px;
+  bottom: 0;
+}
+.tv .body {
+  background: #605f5e;
+  width: 640px;
+  border-radius: 16px;
+  height: 440px;
+  position: absolute;
+  top: 150px;
+}
+.tv .body .screen {
+  width: 445px;
+  height: 380px;
+  border: 10px solid #2a2a2a;
+  border-radius: 80px;
+  background: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  overflow: hidden;
+}
+.tv .body .panel {
+  width: 120px;
+  height: 400px;
+  background: #353535;
+  position: absolute;
+  border-radius: 20px;
+  right: 20px;
+  top: 20px;
+}
+.tv .body .panel .set {
+  border: 4px solid #2a2a2a;
+  background: #ddd;
+  height: 160px;
+  width: 90px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  border-radius: 18px;
+}
+.tv .body .panel .set .circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #1d1d1d;
+  position: absolute;
+  left: 10px;
+}
+.tv .body .panel .set .circle span {
+  width: 12px;
+  height: 56px;
+  background: #fdfdfd;
+  display: block;
+  position: absolute;
+  left: 29px;
+  top: 8px;
+}
+.tv .body .panel .set .channel {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #1d1d1d;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  transform: rotate(45deg);
+}
+.tv .body .panel .set .channel span {
+  width: 12px;
+  height: 56px;
+  background: #fdfdfd;
+  display: block;
+  position: absolute;
+  left: 29px;
+  top: 8px;
+}
+.tv .body .panel .set .voice {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #1d1d1d;
+  position: absolute;
+  left: 10px;
+  top: 85px;
+  transform: rotate(105deg);
+}
+.tv .body .panel .set .voice span {
+  width: 12px;
+  height: 56px;
+  background: #fdfdfd;
+  display: block;
+  position: absolute;
+  left: 29px;
+  top: 8px;
+}
+.tv .body .panel .line {
+  width: 116px;
+  height: 4px;
+  background: #ddd;
+  border: 2px solid #2a2a2a;
+  position: absolute;
+  top: 190px;
+}
+.tv .body .panel .horn {
+  top: 205px;
+  width: 90px;
+  left: 16px;
+  position: absolute;
+}
+.tv .body .panel .horn li {
+  width: 90px;
+  height: 5px;
+  margin-bottom: 3px;
+  background: #2a2a2a;
+  border-bottom: 2px solid #555;
+}
+.tv .body .panel .out {
+  border: 4px solid #2a2a2a;
+  background: #ddd;
+  height: 30px;
+  width: 82px;
+  left: 16px;
+  position: absolute;
+  border-radius: 10px;
+  top: 350px;
+}
+.tv .body .panel .out .circle {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #1d1d1d;
+  border: 6px solid #6a6a6a;
+  position: absolute;
+  top: 3px;
+}
+.tv .body .panel .out .headset {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #1d1d1d;
+  border: 6px solid #6a6a6a;
+  position: absolute;
+  top: 3px;
+  left: 12px;
+}
+.tv .body .panel .out .microphone {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #1d1d1d;
+  border: 6px solid #6a6a6a;
+  position: absolute;
+  top: 3px;
+  right: 12px;
+}
+.tv .footer {
+  position: absolute;
+  top: 590px;
+  width: 640px;
+}
+.tv .footer .left_footer {
+  background: #3b3b3b;
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  left: 80px;
+}
+.tv .footer .right_footer {
+  background: #3b3b3b;
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  right: 80px;
+}
+.signal {
+  width: 470px;
+  height: 380px;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+.signal .left {
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  height: 300px;
+  top: 50px;
+  left: 25px;
+}
+.signal .left div:nth-child(1) {
+  width: 25px;
+  height: 150px;
+  background: #00cc99;
+}
+.signal .left div:nth-child(2) {
+  width: 25px;
+  height: 150px;
+  background: #cc3467;
+}
+.signal .left div:nth-child(3) {
+  width: 25px;
+  height: 50px;
+  background: #669aff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.signal .left div:nth-child(4) {
+  width: 25px;
+  height: 50px;
+  background: #cc6601;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.signal .right {
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  height: 300px;
+  top: 50px;
+  left: 398px;
+}
+.signal .right div:nth-child(1) {
+  width: 25px;
+  height: 150px;
+  background: #669934;
+}
+.signal .right div:nth-child(2) {
+  width: 25px;
+  height: 150px;
+  background: #6766ff;
+}
+.signal .right div:nth-child(3) {
+  width: 25px;
+  height: 50px;
+  background: #669aff;
+  position: absolute;
+  left: -25px;
+  top: 0;
+}
+.signal .right div:nth-child(4) {
+  width: 25px;
+  height: 50px;
+  background: #cc6601;
+  position: absolute;
+  left: -25px;
+  bottom: 0;
+}
+.signal .bg {
+  position: absolute;
+  z-index: 1;
+}
+.signal .bg li {
+  width: 23px;
+  height: 23px;
+  background: #888;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  float: left;
+}
+.signal .circle {
+  width: 340px;
+  height: 340px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  left: 54px;
+  z-index: 2;
+  overflow: hidden;
+}
+.signal .circle .title {
+  background: #000;
+  height: 34px;
+  width: 130px;
+  position: absolute;
+  left: 105px;
+  top: 24px;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+}
+.signal .circle .left_top {
+  background: #000;
+  height: 34px;
+  width: 80px;
+  position: absolute;
+  left: 0px;
+  top: 60px;
+}
+.signal .circle .right_top {
+  background: #000;
+  height: 34px;
+  width: 80px;
+  position: absolute;
+  right: 0px;
+  top: 60px;
+}
+.signal .circle .top_zebra {
+  height: 36px;
+  position: absolute;
+  top: 94px;
+  width: 400px;
+}
+.signal .circle .top_zebra li {
+  float: left;
+  width: 25px;
+  height: 36px;
+  background: #b9b9b9;
+}
+.signal .circle .top_zebra li:nth-child(2n) {
+  background: #000;
+}
+.signal .circle .rainbow {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: 130px;
+}
+.signal .circle .rainbow li {
+  height: 60px;
+  width: 16.66666667%;
+  float: left;
+}
+.signal .circle .rainbow li:nth-child(1) {
+  background: #fffe03;
+}
+.signal .circle .rainbow li:nth-child(2) {
+  background: #01ffff;
+}
+.signal .circle .rainbow li:nth-child(3) {
+  background: #33ff00;
+}
+.signal .circle .rainbow li:nth-child(4) {
+  background: #ff00fe;
+}
+.signal .circle .rainbow li:nth-child(5) {
+  background: #fe0000;
+}
+.signal .circle .rainbow li:nth-child(6) {
+  background: #0000fe;
+}
+.signal .circle .middle {
+  width: 400px;
+  position: absolute;
+  height: 30px;
+  top: 190px;
+}
+.signal .circle .middle li {
+  float: left;
+  height: 15px;
+  background: #000;
+  width: 41px;
+  margin: 0 2px 2px 0;
+}
+.signal .circle .center {
+  position: absolute;
+  z-index: 2;
+  width: 40px;
+  top: 165px;
+  left: 155px;
+}
+.signal .circle .center li {
+  float: left;
+  margin: 0 2px 2px 0;
+  height: 40px;
+  background: #000;
+  width: 15px;
+}
+.signal .circle .black_to_white {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 222px;
+}
+.signal .circle .black_to_white li {
+  height: 40px;
+  width: 16.66666667%;
+  float: left;
+}
+.signal .circle .black_to_white li:nth-child(1) {
+  background: #000;
+}
+.signal .circle .black_to_white li:nth-child(2) {
+  background: #444;
+}
+.signal .circle .black_to_white li:nth-child(3) {
+  background: #777;
+}
+.signal .circle .black_to_white li:nth-child(4) {
+  background: #aaa;
+}
+.signal .circle .black_to_white li:nth-child(5) {
+  background: #ddd;
+}
+.signal .circle .black_to_white li:nth-child(6) {
+  background: #f0f0f0;
+}
+.signal .circle .legend {
+  background: #000;
+  height: 34px;
+  width: 170px;
+  position: absolute;
+  left: 80px;
+  top: 262px;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+}
+.signal .circle .bottom {
+  background: #ffff01;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  height: 44px;
+  position: absolute;
+}
+.signal .circle .bottom span {
+  height: 44px;
+  display: inline-block;
+  background: #f00;
+  width: 40px;
+}
