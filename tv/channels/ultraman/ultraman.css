@@ -11,6 +11,9 @@
 }
 body {
   background: #75d8f9;
+  width: 450px;
+  height: 380px;
+  overflow: hidden;
 }
 .ultraman {
   width: 200px;

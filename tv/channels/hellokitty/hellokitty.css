@@ -21,6 +21,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 body {
 	line-height: 1;
+	width: 450px;
+  height: 380px;
+  overflow: hidden;
 }
 
 /* ------------------------------------------------------------------------------ */
