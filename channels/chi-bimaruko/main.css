@@ -27,8 +27,8 @@ div {
 .main {
   position: relative;
   margin: 0 auto;
-  transform: scale(0.67);
-  top: -10px;
+  transform: scale(0.5, 0.5);
+  top: 10px;
 }
 .me {
   position: absolute;
