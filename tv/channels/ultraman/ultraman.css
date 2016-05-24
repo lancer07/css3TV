@@ -16,6 +16,7 @@ body {
   overflow: hidden;
 }
 .ultraman {
+  transform: scale(0.8);
   width: 200px;
   height: 400px;
   position: relative;
