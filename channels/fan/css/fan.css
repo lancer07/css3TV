@@ -1,0 +1,430 @@
+@keyframes leafRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background: #e5f3f4;
+}
+#fan {
+  width: 230px;
+  position: absolute;
+  top: 325px;
+  left: 750px;
+  z-index: 10;
+}
+#fan .header {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  background: #42c7ea;
+  border-radius: 50%;
+  z-index: 10;
+  border: 2px solid #0e6873;
+}
+#fan .mask {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #0e6873;
+  position: relative;
+  background: #e4ecef;
+  z-index: 11;
+}
+#fan .mask .logo {
+  border: 2px solid #0e6873;
+  border-radius: 50%;
+  position: absolute;
+  width: 80px;
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  color: #0e6873;
+  font-size: 14px;
+  top: 53px;
+  left: 58px;
+  background: #42c7ea;
+  z-index: 3;
+}
+#fan .mask .line {
+  width: 200px;
+  height: 2px;
+  background: #3c8a93;
+  position: absolute;
+  top: 99px;
+  z-index: 2;
+}
+#fan .mask .line_1 {
+  width: 200px;
+  height: 2px;
+  background: #3c8a93;
+  position: absolute;
+  top: 99px;
+  z-index: 2;
+}
+#fan .mask .line_2 {
+  width: 200px;
+  height: 2px;
+  background: #3c8a93;
+  position: absolute;
+  top: 99px;
+  z-index: 2;
+  transform: rotate(30deg);
+}
+#fan .mask .line_3 {
+  width: 200px;
+  height: 2px;
+  background: #3c8a93;
+  position: absolute;
+  top: 99px;
+  z-index: 2;
+  transform: rotate(60deg);
+}
+#fan .mask .line_4 {
+  width: 200px;
+  height: 2px;
+  background: #3c8a93;
+  position: absolute;
+  top: 99px;
+  z-index: 2;
+  transform: rotate(90deg);
+}
+#fan .mask .line_5 {
+  width: 200px;
+  height: 2px;
+  background: #3c8a93;
+  position: absolute;
+  top: 99px;
+  z-index: 2;
+  transform: rotate(120deg);
+}
+#fan .mask .line_6 {
+  width: 200px;
+  height: 2px;
+  background: #3c8a93;
+  position: absolute;
+  top: 99px;
+  z-index: 2;
+  transform: rotate(150deg);
+}
+#fan .mask .leafs {
+  z-index: 1;
+  position: absolute;
+  animation: leafRotate 0s infinite linear;
+  transform-origin: center center;
+  width: 200px;
+  height: 200px;
+}
+#fan .mask .leafs .leaf {
+  width: 72px;
+  height: 60px;
+  border-radius: 20% 40%;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transform-origin: left top;
+}
+#fan .mask .leafs .leaf_1 {
+  width: 72px;
+  height: 60px;
+  border-radius: 20% 40%;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transform-origin: left top;
+}
+#fan .mask .leafs .leaf_2 {
+  width: 72px;
+  height: 60px;
+  border-radius: 20% 40%;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transform-origin: left top;
+  transform: rotate(120deg);
+}
+#fan .mask .leafs .leaf_3 {
+  width: 72px;
+  height: 60px;
+  border-radius: 20% 40%;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transform-origin: left top;
+  transform: rotate(240deg);
+}
+#fan .neck {
+  width: 40px;
+  height: 70px;
+  border: 2px solid #0e6873;
+  background: #42c7ea;
+  position: absolute;
+  left: 80px;
+  z-index: 9;
+  border-radius: 0 0 5% 5%;
+}
+#fan .neck_footer {
+  width: 50px;
+  height: 20px;
+  border: 2px solid #0e6873;
+  background: #77e1f1;
+  position: absolute;
+  top: 263px;
+  left: 75px;
+  border-radius: 50%;
+  z-index: 8;
+}
+#fan .bottom {
+  width: 200px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #0e6873;
+  background: #42c7ea;
+  position: absolute;
+  top: 250px;
+  left: 0px;
+  z-index: 7;
+}
+#fan .bottom_footer {
+  width: 20px;
+  height: 20px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 40%;
+  z-index: 6;
+  top: 310px;
+}
+#fan .bottom_footer_1 {
+  width: 20px;
+  height: 20px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 40%;
+  z-index: 6;
+  top: 310px;
+  left: 20px;
+}
+#fan .bottom_footer_2 {
+  width: 20px;
+  height: 20px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 40%;
+  z-index: 6;
+  top: 310px;
+  left: 160px;
+}
+#fan .switch {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 296px;
+  z-index: 13;
+  opacity: 0;
+  cursor: pointer;
+}
+#fan .switch_btn {
+  display: inline-block;
+  text-align: center;
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 50%;
+  color: #0e6873;
+  cursor: pointer;
+  top: 296px;
+  z-index: 12;
+  transform: rotateX(45deg);
+}
+#fan .switch_0 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 296px;
+  z-index: 13;
+  opacity: 0;
+  cursor: pointer;
+  left: 50px;
+}
+#fan .switch_0:checked + div + input + div + input + div + input + div + .mask .leafs {
+  animation-play-state: paused;
+}
+#fan .switch_1 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 296px;
+  z-index: 13;
+  opacity: 0;
+  cursor: pointer;
+  left: 75px;
+}
+#fan .switch_1:checked + div {
+  background: #a9af27;
+  color: #0e6873;
+}
+#fan .switch_1:checked + div + input + div + input + div + .mask .leafs {
+  animation-duration: 0.7s;
+}
+#fan .switch_2 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 296px;
+  z-index: 13;
+  opacity: 0;
+  cursor: pointer;
+  left: 100px;
+}
+#fan .switch_2:checked + div {
+  background: #a9af27;
+  color: #0e6873;
+}
+#fan .switch_2:checked + div + input + div + .mask .leafs {
+  animation-duration: 0.4s;
+}
+#fan .switch_3 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 296px;
+  z-index: 13;
+  opacity: 0;
+  cursor: pointer;
+  left: 125px;
+}
+#fan .switch_3:checked + div {
+  background: #a9af27;
+  color: #0e6873;
+}
+#fan .switch_3:checked + div + .mask .leafs {
+  animation-duration: 0.3s;
+}
+#fan .switch_btn_0 {
+  display: inline-block;
+  text-align: center;
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 50%;
+  color: #0e6873;
+  cursor: pointer;
+  top: 296px;
+  z-index: 12;
+  transform: rotateX(45deg);
+  left: 50px;
+}
+#fan .switch_btn_1 {
+  display: inline-block;
+  text-align: center;
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 50%;
+  color: #0e6873;
+  cursor: pointer;
+  top: 296px;
+  z-index: 12;
+  transform: rotateX(45deg);
+  left: 75px;
+}
+#fan .switch_btn_2 {
+  display: inline-block;
+  text-align: center;
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 50%;
+  color: #0e6873;
+  cursor: pointer;
+  top: 296px;
+  z-index: 12;
+  transform: rotateX(45deg);
+  left: 100px;
+}
+#fan .switch_btn_3 {
+  display: inline-block;
+  text-align: center;
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 50%;
+  color: #0e6873;
+  cursor: pointer;
+  top: 296px;
+  z-index: 12;
+  transform: rotateX(45deg);
+  left: 125px;
+}
+#fan .on_off {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  top: 296px;
+  z-index: 13;
+  left: 80px;
+  opacity: 0;
+  cursor: pointer;
+}
+#fan .on_off:checked + div {
+  box-shadow: none;
+}
+#fan .on_off:checked + div + .mask .leafs {
+  animation: leafRotate 2s 1 ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+#fan .on_off_btn {
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  background: #bdcc2b;
+  border: 2px solid #0e6873;
+  position: absolute;
+  border-radius: 50%;
+  color: #0e6873;
+  cursor: pointer;
+  top: 296px;
+  z-index: 12;
+  left: 80px;
+  box-shadow: inset 2px 2px 6px #555;
+}
