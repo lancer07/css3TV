@@ -1,3 +1,6 @@
+body {
+  background: #f7f5dc;
+}
 .tv {
   width: 640px;
   margin: 100px auto;
@@ -35,16 +38,62 @@
   position: absolute;
   top: 150px;
 }
+.tv .body input {
+  position: absolute;
+  z-index: 2;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: 0;
+}
+.tv .body input:nth-child(1) {
+  left: 535px;
+  top: 40px;
+}
+.tv .body input:nth-child(1):checked + input + input + input + .screen + .panel .set .channel {
+  transform: rotate(315deg);
+}
+.tv .body input:nth-child(2) {
+  left: 570px;
+  top: 40px;
+}
+.tv .body input:nth-child(2):checked + input + input + .screen .signal {
+  display: block;
+}
+.tv .body input:nth-child(2):checked + input + input + .screen + .panel .set .channel {
+  transform: rotate(45deg);
+}
+.tv .body input:nth-child(3) {
+  left: 535px;
+  top: 70px;
+}
+.tv .body input:nth-child(3):checked + input + .screen .signal {
+  display: block;
+}
+.tv .body input:nth-child(3):checked + input + .screen + .panel .set .channel {
+  transform: rotate(225deg);
+}
+.tv .body input:nth-child(4) {
+  left: 570px;
+  top: 70px;
+}
+.tv .body input:nth-child(4):checked + .screen .cctv {
+  display: block;
+}
+.tv .body input:nth-child(4):checked + .screen + .panel .set .channel {
+  transform: rotate(135deg);
+}
 .tv .body .screen {
   width: 445px;
   height: 380px;
   border: 10px solid #2a2a2a;
+  background: #2e2e2e;
   border-radius: 80px;
-  background: none;
   position: absolute;
   top: 20px;
   left: 20px;
   overflow: hidden;
+  z-index: 1;
 }
 .tv .body .panel {
   width: 120px;
@@ -82,6 +131,16 @@
   left: 29px;
   top: 8px;
 }
+.tv .body .panel .set .circle span strong {
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  background: #2a2a2a;
+}
 .tv .body .panel .set .channel {
   width: 70px;
   height: 70px;
@@ -90,7 +149,8 @@
   position: absolute;
   left: 10px;
   top: 5px;
-  transform: rotate(45deg);
+  transform: rotate(0);
+  transition: transform 1s;
 }
 .tv .body .panel .set .channel span {
   width: 12px;
@@ -100,6 +160,16 @@
   position: absolute;
   left: 29px;
   top: 8px;
+}
+.tv .body .panel .set .channel span strong {
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  background: #2a2a2a;
 }
 .tv .body .panel .set .voice {
   width: 70px;
@@ -119,6 +189,16 @@
   position: absolute;
   left: 29px;
   top: 8px;
+}
+.tv .body .panel .set .voice span strong {
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  background: #2a2a2a;
 }
 .tv .body .panel .line {
   width: 116px;
@@ -199,7 +279,19 @@
   position: absolute;
   right: 80px;
 }
+.cctv {
+  width: 450px;
+  height: 380px;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
 .signal {
+  display: none;
+  z-index: 3;
   width: 470px;
   height: 380px;
   position: absolute;
