@@ -1,0 +1,178 @@
+// out: ultraman.css
+
+@keyframes jump{
+	0%{
+		background:#48e1e7;
+	}
+	50%{
+		background:#961e1e;
+	}
+	100%{
+		background:#48e1e7;
+	}
+}
+
+body{
+	background:#75d8f9;
+}
+.ultraman{
+	width:200px;
+	height: 400px;
+	position: relative;
+	left:50%;
+	top:18px;
+	margin-left:-110px;
+	header{
+		border:7px solid #000;
+		border-top:15px solid #000;
+		width:200px;
+		height:200px;
+		border-radius:50% 50% 60% 60%;
+		position:absolute;
+		background:#fff;
+		.hair{
+			position:absolute;
+			top:-40px;
+			left:80px;
+			width: 0;
+			height: 0;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-top: 140px solid #000;
+			border-radius:30% 30% 50% 50%;
+		}
+		.eye(@l,@r){
+			border:5px solid #000;
+			width:70px;
+			height:70px;
+			background:#ffc30a;
+			border-radius:@l @r;
+			position:absolute;
+		}
+		.left_eye{
+			.eye(50%,80%);
+			transform:rotate(-15deg);
+			top:60px;
+			left:10px;
+		}
+		.right_eye{
+			.eye(80%,50%);
+			transform:rotate(15deg);
+			top:60px;
+			right:10px;
+		}
+		.ear(@deg){
+			width:20px;
+			height:50px;
+			border:5px solid #000;
+			position:absolute;
+			top:70px;
+			z-index:-1;
+			transform:rotate(@deg);
+			background:#fff;
+		}
+		.left_ear{
+			.ear(-7deg);
+			left:-20px
+		}
+		.right_ear{
+			.ear(7deg);
+			right:-20px
+		}
+	}
+	.body{
+		width:100px;
+		height:80px;
+		background:#fff;
+		border:7px solid #000;
+		position:absolute;
+		top:180px;
+		left:50px;
+		border-radius:0 0 20% 20%;
+		z-index:-1;
+		.light{
+			width:40px;
+			height:40px;
+			border:3px solid #000;
+			position:relative;
+			top:20px;
+			left:30px;
+			background:red;
+			transform:rotate(-45deg);
+			span{
+				width:8px;
+				height:8px;
+				border:2px solid #000;
+				background:#48e1e7;
+				display:block;
+				position:absolute;
+				left:3px;
+				top:26px;
+				border-radius:50%;
+				z-index:2;
+				animation:jump 0.5s infinite;
+			}
+		}
+	}
+	.hand{
+		width:30px;
+		height:100px;
+		border-radius:60% 60% 50% 50%;
+		border:7px solid #000;
+		position:absolute;
+		background:#fff;
+	}
+	.left_hand{
+		.hand;
+		top:160px;
+		left:30px;
+	}
+	.right_hand{
+		.hand;
+		top:160px;
+		left:90px;
+		transform:rotate(-90deg);
+	}
+	.trousers{
+		border:7px solid #000;
+		position:absolute;
+		background:red;
+		width:100px;
+		height:45px;
+		top:240px;
+		left:50px;
+		z-index:-2;
+		border-radius:0 0 15% 15%;
+	}
+	.footer{
+		width:34px;
+		height:80px;
+		border-radius:50% 50% 60% 60%;
+		border:7px solid #000;
+		position:absolute;
+		background:#fff;
+		z-index:-3;
+	}
+	.left_footer{
+		.footer;
+		left:46px;
+		top:260px;
+		transform:rotate(20deg);
+	}
+	.right_footer{
+		.footer;
+		right:20px;
+		top:270px;
+		transform:rotate(-50deg);
+	}
+	.egg{
+		background:#75d8f9;
+	    width: 18px;
+	    height: 30px;
+	    top: 286px;
+	    left: 97px;
+	    position: absolute;
+	    border-radius: 50%;
+		border-top:7px solid #000;
+	}
+}

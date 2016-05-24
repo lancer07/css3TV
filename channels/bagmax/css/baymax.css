@@ -1,0 +1,354 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+:before, :after {
+  content: '';
+  position: absolute;
+}
+
+body {
+  background: #FC999E;
+  width: 450px;
+  height: 380px;
+  overflow: hidden;
+}
+
+.baymax-shadow, .baymax-body:before, .baymax-body:after, .baymax-leg:before, .baymax-leg:after, .baymax-arm:after {
+  background: #efe7e7;
+  border: 1px solid #EAEAEA;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.baymax-bg, .baymax-head, .baymax-body, .baymax-body .baymax-heart, .baymax-leg, .baymax-arm {
+  background: whitesmoke;
+  border: 1px solid #EAEAEA;
+}
+
+.baymax {
+  position: relative;
+  margin: 60px auto;
+  width: 300px;
+  height: 300px;
+}
+
+.baymax-head {
+  position: absolute;
+  left: 50%;
+  margin-left: -21px;
+  width: 42px;
+  height: 28px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+  z-index: 3;
+  overflow: hidden;
+  -webkit-box-shadow: 0 6px 8px -5px rgba(128, 128, 128, 0.75), inset 0 -6px 8px -5px rgba(204, 204, 204, 0.5);
+  -moz-box-shadow: 0 6px 8px -5px rgba(128, 128, 128, 0.75), inset 0 -6px 8px -5px rgba(204, 204, 204, 0.5);
+  box-shadow: 0 6px 8px -5px rgba(128, 128, 128, 0.75), inset 0 -6px 8px -5px rgba(204, 204, 204, 0.5);
+}
+
+.baymax-head .head-highlight {
+  position: absolute;
+  top: 12%;
+  right: 25%;
+  width: 45%;
+  height: 1%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 18px 9px #ffffff, 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 18px 9px #ffffff, 0 0 0 0 transparent;
+  box-shadow: 0 0 18px 9px #ffffff, 0 0 0 0 transparent;
+}
+
+.baymax-head .baymax-eyes {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  transform: translateX(-10px);
+  height: 1px;
+  width: 20px;
+  background: #333333;
+}
+
+.baymax-head .baymax-eyes:before, .baymax-head .baymax-eyes:after {
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  background: #333333;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.baymax-head .baymax-eyes:before {
+  left: -2px;
+}
+
+.baymax-head .baymax-eyes:after {
+  right: -2px;
+}
+
+
+.baymax-body {
+  position: absolute;
+  top: 18.66667px;
+  left: 50%;
+  -webkit-transform: translateX(-62px);
+  -moz-transform: translateX(-62px);
+  -ms-transform: translateX(-62px);
+  -o-transform: translateX(-62px);
+  transform: translateX(-62px);
+  width: 124px;
+  height: 180px;
+  -webkit-border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  -moz-border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  -ms-border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.baymax-body .body-highlight {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  width: 0%;
+  height: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 45px 25px #ffffff, 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 45px 25px #ffffff, 0 0 0 0 transparent;
+  box-shadow: 0 0 45px 25px #ffffff, 0 0 0 0 transparent;
+}
+
+.baymax-body .baymax-heart {
+  position: absolute;
+  top: 35px;
+  right: 30%;
+  height: 12px;
+  width: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.baymax-body:before, .baymax-body:after {
+  top: 55px;
+  width: 15px;
+  height: 40px;
+}
+
+.baymax-body:before {
+  left: -8px;
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.baymax-body:after {
+  right: -8px;
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+.baymax-leg {
+  position: absolute;
+  top: 165px;
+  width: 48px;
+  height: 85px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.baymax-leg:before {
+  top: -50px;
+  height: 100px;
+  width: 30px;
+}
+
+.baymax-leg:after {
+  bottom: -22px;
+  height: 30px;
+  width: 60px;
+}
+
+.baymax-leg .leg-highlight {
+  position: absolute;
+  top: 40%;
+  width: 1%;
+  height: 38%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 16px 7px rgba(255, 255, 255, 0.8), 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 16px 7px rgba(255, 255, 255, 0.8), 0 0 0 0 transparent;
+  box-shadow: 0 0 16px 7px rgba(255, 255, 255, 0.8), 0 0 0 0 transparent;
+}
+
+.baymax-leg .crosspart {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 48px;
+  height: 85px;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #cccccc, 0 0 0 0 transparent;
+  -moz-box-shadow: inset 0px 0px 15px 0px #cccccc, 0 0 0 0 transparent;
+  box-shadow: inset 0px 0px 15px 0px #cccccc, 0 0 0 0 transparent;
+}
+
+.baymax-left-leg {
+  left: 50%;
+  margin-left: -50px;
+  -webkit-border-radius: 20% 0 30% 50%/50% 0 30% 50%;
+  -moz-border-radius: 20% 0 30% 50%/50% 0 30% 50%;
+  -ms-border-radius: 20% 0 30% 50%/50% 0 30% 50%;
+  border-radius: 20% 0 30% 50%/50% 0 30% 50%;
+}
+
+.baymax-left-leg:before {
+  left: -20px;
+}
+
+.baymax-left-leg:after {
+  left: 0;
+}
+
+.baymax-left-leg .lleg-highlight {
+  left: 25px;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.baymax-right-leg {
+  right: 50%;
+  margin-right: -50px;
+  -webkit-border-radius: 0 20% 50% 30%/0 50% 50% 30%;
+  -moz-border-radius: 0 20% 50% 30%/0 50% 50% 30%;
+  -ms-border-radius: 0 20% 50% 30%/0 50% 50% 30%;
+  border-radius: 0 20% 50% 30%/0 50% 50% 30%;
+}
+
+.baymax-right-leg:before {
+  right: -20px;
+}
+
+.baymax-right-leg:after {
+  right: 0;
+}
+
+.baymax-right-leg .rleg-highlight {
+  right: 20px;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+.baymax-arm {
+  position: absolute;
+  top: 28px;
+  height: 145px;
+  width: 40px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.baymax-arm:after {
+  top: 60px;
+  height: 50px;
+  width: 25px;
+}
+
+.baymax-arm .arm-highlight {
+  position: absolute;
+  top: 25%;
+  width: 1%;
+  height: 65%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 16px 7px rgba(255, 255, 255, 0.8), 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 16px 7px rgba(255, 255, 255, 0.8), 0 0 0 0 transparent;
+  box-shadow: 0 0 16px 7px rgba(255, 255, 255, 0.8), 0 0 0 0 transparent;
+}
+
+.baymax-left-arm {
+  left: 65px;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+  transform: rotate(25deg);
+  -webkit-border-radius: 90px 20px 20px 90px/200px 40px 40px 200px;
+  -moz-border-radius: 90px 20px 20px 90px/200px 40px 40px 200px;
+  -ms-border-radius: 90px 20px 20px 90px/200px 40px 40px 200px;
+  border-radius: 90px 20px 20px 90px/200px 40px 40px 200px;
+}
+
+.baymax-left-arm:after {
+  left: -20px;
+}
+
+.baymax-left-arm .larm-highlight {
+  left: 30%;
+}
+
+.baymax-right-arm {
+  right: 65px;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  -webkit-border-radius: 20px 90px 90px 20px/40px 200px 200px 40px;
+  -moz-border-radius: 20px 90px 90px 20px/40px 200px 200px 40px;
+  -ms-border-radius: 20px 90px 90px 20px/40px 200px 200px 40px;
+  border-radius: 20px 90px 90px 20px/40px 200px 200px 40px;
+}
+
+.baymax-right-arm:after {
+  right: -20px;
+}
+
+.baymax-right-arm .rarm-highlight {
+  right: 30%;
+}
