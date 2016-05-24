@@ -1,5 +1,7 @@
 //out : tv.css
-
+body{
+	background: #f7f5dc;
+}
 .tv{
 	width: 640px;
 	margin: 100px auto;
@@ -36,16 +38,86 @@
 		height: 440px;
 		position: absolute;
 		top: 150px;
+		input{
+			position: absolute;
+			z-index: 2;
+			width: 35px;
+			height: 35px;
+			cursor: pointer;
+			opacity: 0;
+			&:nth-child(1){
+				left: 535px;
+				top: 40px;
+				&:checked+input+input+input+.screen{
+					&+.panel{
+						.set{
+							.channel{
+								transform: rotate(315deg);
+							}
+						}
+					}
+				}
+			}
+			&:nth-child(2){
+				left: 570px;
+				top: 40px;
+				&:checked+input+input+.screen{
+					.signal{
+						display: block;
+					}
+					&+.panel{
+						.set{
+							.channel{
+								transform: rotate(45deg);
+							}
+						}
+					}
+				}
+			}
+			&:nth-child(3){
+				left: 535px;
+				top: 70px;
+				&:checked+input+.screen{
+					.signal{
+						display: block;
+					}
+					&+.panel{
+						.set{
+							.channel{
+								transform: rotate(225deg);
+							}
+						}
+					}
+				}
+			}
+			&:nth-child(4){
+				left: 570px;
+				top: 70px;
+				&:checked+.screen{
+					.cctv{
+						display: block;
+					}
+					&+.panel{
+						.set{
+							.channel{
+								transform: rotate(135deg);
+							}
+						}
+					}
+				}
+			}
+		}
 		.screen{
 			width: 445px;
 			height: 380px;
 			border:10px solid #2a2a2a;
+			background: #2e2e2e;
 			border-radius: 80px;
-			background: none;
 			position: absolute;
 			top: 20px;
 			left: 20px;
 			overflow: hidden;
+			z-index: 1;
 		}
 		.panel{
 			width: 120px;
@@ -79,12 +151,23 @@
 						position: absolute;
 						left: 29px;
 						top: 8px;
+						strong{
+							position: absolute;
+							display: inline-block;
+							width: 8px;
+							height: 8px;
+							border-radius: 50%;
+							left: 2px;
+							top: 2px;
+							background: #2a2a2a;
+						}
 					}
 				}
 				.channel{
 					.circle;
 					top: 5px;
-					transform: rotate(45deg);
+					transform: rotate(0);
+					transition: transform 1s;
 				}
 				.voice{
 					.circle;
@@ -163,9 +246,20 @@
 	}
 }
 
-
+.cctv{
+	width: 450px;
+	height: 380px;
+	position: absolute;
+	background: #fff;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: none;
+}
 
 .signal{
+	display: none;
+	z-index: 3;
 	width: 470px;
 	height: 380px;
 	position: absolute;
