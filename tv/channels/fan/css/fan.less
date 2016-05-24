@@ -1,0 +1,300 @@
+//out: fan.css
+@borderColor : #0e6873;
+@bg : #42c7ea;
+
+@keyframes leafRotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+body{
+	background: #e5f3f4;
+}
+#fan{
+	width: 230px;
+	position: absolute;
+	top: 325px;
+	left: 750px;
+	z-index: 10;
+	.header{
+		width: 230px;
+		height: 230px;
+		position: absolute;
+		left: -15px;
+		top: -15px;
+		background: @bg;
+		border-radius: 50%;
+		z-index: 10;
+		border:2px solid @borderColor ;
+	}
+	.mask{
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border:2px solid @borderColor ;
+		position: relative;
+		background: #e4ecef;
+		z-index: 11;
+		.logo{
+			border:2px solid @borderColor ;
+			border-radius: 50%;
+			position: absolute;
+			width: 80px;
+			height: 90px;
+			text-align: center;
+			line-height: 90px;
+			color:@borderColor;
+			font-size: 14px;
+			top: 53px;
+			left: 58px;
+			background: @bg;
+			z-index: 3;
+		}
+		.line{
+			width: 200px;
+			height: 2px;
+			background: #3c8a93;
+			position: absolute;
+			top: 99px;
+			z-index: 2;
+		}
+		.line_1{
+			.line;
+		}
+		.line_2{
+			.line;
+			transform: rotate(30deg);
+		}
+		.line_3{
+			.line;
+			transform: rotate(60deg);
+		}
+		.line_4{
+			.line;
+			transform: rotate(90deg);
+		}
+		.line_5{
+			.line;
+			transform: rotate(120deg);
+		}
+		.line_6{
+			.line;
+			transform: rotate(150deg);
+		}
+		.leafs{
+			z-index: 1;
+			position: absolute;
+			animation:leafRotate 0s infinite linear;
+			transform-origin: center center;
+			width: 200px;
+			height: 200px;
+			.leaf{
+				width: 72px;
+				height: 60px;
+				border-radius: 20% 40%;
+				background: #bdcc2b;
+				border:2px solid @borderColor;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				transform-origin: left top;
+			}
+			.leaf_1{
+				.leaf;
+			}
+			.leaf_2{
+				.leaf;
+				transform: rotate(120deg)
+			}
+			.leaf_3{
+				.leaf;
+				transform: rotate(240deg)
+			}
+		}
+	}
+	.neck{
+		width: 40px;
+		height: 70px;
+		border:2px solid @borderColor;
+		background: @bg;
+		position: absolute;
+		left: 80px;
+		z-index: 9;
+		border-radius: 0 0 5% 5%;
+	}
+	.neck_footer{
+		width: 50px;
+		height: 20px;
+		border:2px solid @borderColor;
+		background: #77e1f1;
+		position: absolute;
+		top: 263px;
+		left: 75px;
+		border-radius: 50%;
+		z-index: 8;
+	}
+	.bottom{
+		width: 200px;
+		height: 80px;
+		border-radius: 50%;
+		border:2px solid @borderColor;
+		background: @bg;
+		position: absolute;
+		top: 250px;
+		left: 0px;
+		z-index: 7;
+	}
+	.bottom_footer{
+		width: 20px;
+		height: 20px;
+		background: #bdcc2b;
+		border:2px solid @borderColor;
+		position: absolute;
+		border-radius: 40%;
+		z-index: 6;
+		top: 310px;
+	}
+	.bottom_footer_1{
+		.bottom_footer;
+		left:20px;
+	}
+	.bottom_footer_2{
+		.bottom_footer;
+		left:160px;
+	}
+	.switch{
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: 296px;
+		z-index: 13;
+		opacity: 0;
+		cursor: pointer;
+	}
+	.switch_btn{
+		display: inline-block;
+		text-align: center;
+		width: 18px;
+		height: 20px;
+		line-height: 20px;
+		font-size: 12px;
+		background: #bdcc2b;
+		border:2px solid @borderColor;
+		position: absolute;
+		border-radius: 50%;
+		color: @borderColor;
+		cursor: pointer;
+		top: 296px;
+		z-index: 12;
+		transform: rotateX(45deg);
+	}
+	.switch_0{
+		.switch;
+		left: 50px;
+		&:checked+div{
+			&+input+div+input+div+input+div+.mask{
+				.leafs{
+					animation-play-state:paused;
+				}
+			}
+		}
+	}
+	.switch_1{
+		.switch;
+		left: 75px;
+		&:checked+div{
+			background: #a9af27;
+			color: #0e6873;
+			&+input+div+input+div+.mask{
+				.leafs{
+					animation-duration : 0.7s
+				}
+			}
+		}
+	}
+	.switch_2{
+		.switch;
+		left: 100px;
+		&:checked+div{
+			background: #a9af27;
+			color: #0e6873;
+			&+input+div+.mask{
+				.leafs{
+					animation-duration : 0.4s
+				}
+			}
+		}
+	}
+	.switch_3{
+		.switch;
+		left: 125px;
+		&:checked+div{
+			background: #a9af27;
+			color: #0e6873;
+			&+.mask{
+				.leafs{
+					animation-duration : 0.3s
+				}
+			}
+		}
+	}
+	.switch_btn_0{
+		.switch_btn;
+		left: 50px;
+	}
+	.switch_btn_1{
+		.switch_btn;
+		left: 75px;
+	}
+	.switch_btn_2{
+		.switch_btn;
+		left: 100px;
+	}
+	.switch_btn_3{
+		.switch_btn;
+		left: 125px;
+	}
+	.on_off{
+		position: absolute;
+		width: 40px;
+		height: 20px;
+		top: 296px;
+		z-index: 13;
+		left: 80px;
+		opacity: 0;
+		cursor: pointer;
+		&:checked+div{
+			box-shadow:none;
+			&+.mask{
+				.leafs{
+					animation:leafRotate 2s 1 ease-out;
+					animation-delay : 1s;
+					animation-fill-mode: forwards;
+				}
+			}
+		}
+	}
+	.on_off_btn{
+		display: inline-block;
+		text-align: center;
+		width: 40px;
+		height: 20px;
+		line-height: 20px;
+		font-size: 12px;
+		background: #bdcc2b;
+		border:2px solid @borderColor;
+		position: absolute;
+		border-radius: 50%;
+		color: @borderColor;
+		cursor: pointer;
+		top: 296px;
+		z-index: 12;
+		left: 80px;
+		box-shadow: inset 2px 2px 6px #555;
+	}
+
+}

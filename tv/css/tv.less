@@ -4,8 +4,9 @@ body{
 }
 .tv{
 	width: 640px;
-	margin: 100px auto;
-	position: relative;
+	top: 50px;
+	left: 50px;
+	position: absolute;
 	.antenna{
 		width: 2px;
 		height: 200px;
@@ -40,67 +41,110 @@ body{
 		top: 150px;
 		input{
 			position: absolute;
-			z-index: 2;
-			width: 35px;
-			height: 35px;
+			z-index: 3;
+			left: 555px;
+			top: 67px;
 			cursor: pointer;
+			transform-origin: center;
 			opacity: 0;
 			&:nth-child(1){
-				left: 535px;
-				top: 40px;
-				&:checked+input+input+input+.screen{
+				transform: rotate(0deg) translate(0px,-28px);
+				&:checked+input+input+input+input+input+.screen{
+					.signal{
+						display: block;
+						opacity: 1;
+					}
 					&+.panel{
 						.set{
 							.channel{
-								transform: rotate(315deg);
+								span{
+									transform: rotate(0deg);
+								}
 							}
 						}
 					}
 				}
 			}
 			&:nth-child(2){
-				left: 570px;
-				top: 40px;
-				&:checked+input+input+.screen{
-					.signal{
-						display: block;
+				transform: rotate(60deg) translate(0px,-28px);
+				&:checked+input+input+input+input+.screen{
+					.ultraman{
+						opacity: 1;
 					}
 					&+.panel{
 						.set{
 							.channel{
-								transform: rotate(45deg);
+								span{
+									transform: rotate(60deg);
+								}
 							}
 						}
 					}
 				}
 			}
 			&:nth-child(3){
-				left: 535px;
-				top: 70px;
-				&:checked+input+.screen{
-					.signal{
-						display: block;
+				transform: rotate(120deg) translate(0px,-28px);
+				&:checked+input+input+input+.screen{
+					.hellokitty{
+						opacity: 1;
 					}
 					&+.panel{
 						.set{
 							.channel{
-								transform: rotate(225deg);
+								span{
+									transform: rotate(120deg);
+								}
 							}
 						}
 					}
 				}
 			}
 			&:nth-child(4){
-				left: 570px;
-				top: 70px;
-				&:checked+.screen{
-					.cctv{
-						display: block;
+				transform: rotate(180deg) translate(0px,-28px);
+				&:checked+input+input+.screen{
+					.minons{
+						opacity: 1;
 					}
 					&+.panel{
 						.set{
 							.channel{
-								transform: rotate(135deg);
+								span{
+									transform: rotate(180deg);
+								}
+							}
+						}
+					}
+				}
+			}
+			&:nth-child(5){
+				transform: rotate(240deg) translate(0px,-28px);
+				&:checked+input+.screen{
+					.chi-bimaruko{
+						opacity: 1;
+					}
+					&+.panel{
+						.set{
+							.channel{
+								span{
+									transform: rotate(240deg);
+								}
+							}
+						}
+					}
+				}
+			}
+			&:nth-child(6){
+				transform: rotate(300deg) translate(0px,-28px);
+				&:checked+.screen{
+					.bagmax{
+						opacity: 1;
+					}
+					&+.panel{
+						.set{
+							.channel{
+								span{
+									transform: rotate(300deg);
+								}
 							}
 						}
 					}
@@ -145,34 +189,64 @@ body{
 					left: 10px;
 					span{
 						width: 12px;
-						height: 56px;
+						height: 40px;
 						background: #fdfdfd;
 						display: block;
 						position: absolute;
-						left: 29px;
-						top: 8px;
-						strong{
-							position: absolute;
-							display: inline-block;
-							width: 8px;
-							height: 8px;
-							border-radius: 50%;
-							left: 2px;
-							top: 2px;
-							background: #2a2a2a;
-						}
+						left: 30px;
+						top: 15px;
+						border-radius: 20px 20px 0 0;
 					}
 				}
 				.channel{
 					.circle;
 					top: 5px;
-					transform: rotate(0);
-					transition: transform 1s;
+					ul{
+						position: absolute;
+						left: 32px;
+						top: 31px;
+						z-index: 2;
+						li{
+							width: 8px;
+							cursor: pointer;
+							height: 8px;
+							border-radius: 50%;
+							background: #ddd;
+							position: absolute;
+							transform-origin: center;
+							&:nth-child(1){
+								transform: rotate(0deg) translate(0px,-28px);
+							}
+							&:nth-child(2){
+								transform: rotate(60deg) translate(0px,-28px);
+							}
+							&:nth-child(3){
+								transform: rotate(120deg) translate(0px,-28px);
+							}
+							&:nth-child(4){
+								transform: rotate(180deg) translate(0px,-28px);
+							}
+							&:nth-child(5){
+								transform: rotate(240deg) translate(0px,-28px);
+							}
+							&:nth-child(6){
+								transform: rotate(300deg) translate(0px,-28px);
+							}
+						}
+					}
+					span{
+						transform: rotate(0);
+						transition: transform 1s;
+						transform-origin: center;
+					}
+
 				}
 				.voice{
 					.circle;
 					top: 85px;
-					transform: rotate(105deg);
+					span{
+						transform: rotate(105deg);
+					}
 				}
 			}
 			.line{
@@ -246,16 +320,30 @@ body{
 	}
 }
 
-.cctv{
+
+.ultraman,
+.hellokitty,
+.minons,
+.chi-bimaruko,
+.bagmax,
+.fan{
 	width: 450px;
 	height: 380px;
 	position: absolute;
 	background: #fff;
+	opacity: 0;
+	transition: all 1s;
 	top: 0;
 	left: 0;
 	z-index: 2;
-	display: none;
+	iframe{
+		width: 450px;
+		height: 380px;
+	}
 }
+
+
+
 
 .signal{
 	display: none;

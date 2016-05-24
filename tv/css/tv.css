@@ -3,8 +3,9 @@ body {
 }
 .tv {
   width: 640px;
-  margin: 0px auto;
-  position: relative;
+  top: 50px;
+  left: 50px;
+  position: absolute;
 }
 .tv .antenna {
   width: 2px;
@@ -40,48 +41,67 @@ body {
 }
 .tv .body input {
   position: absolute;
-  z-index: 2;
-  width: 35px;
-  height: 35px;
+  z-index: 3;
+  left: 555px;
+  top: 67px;
   cursor: pointer;
+  transform-origin: center;
   opacity: 0;
 }
 .tv .body input:nth-child(1) {
-  left: 535px;
-  top: 40px;
+  transform: rotate(0deg) translate(0px, -28px);
 }
-.tv .body input:nth-child(1):checked + input + input + input + .screen + .panel .set .channel {
-  transform: rotate(315deg);
+.tv .body input:nth-child(1):checked + input + input + input + input + input + .screen .signal {
+  display: block;
+  opacity: 1;
+}
+.tv .body input:nth-child(1):checked + input + input + input + input + input + .screen + .panel .set .channel span {
+  transform: rotate(0deg);
 }
 .tv .body input:nth-child(2) {
-  left: 570px;
-  top: 40px;
+  transform: rotate(60deg) translate(0px, -28px);
 }
-.tv .body input:nth-child(2):checked + input + input + .screen .signal {
-  display: block;
+.tv .body input:nth-child(2):checked + input + input + input + input + .screen .ultraman {
+  opacity: 1;
 }
-.tv .body input:nth-child(2):checked + input + input + .screen + .panel .set .channel {
-  transform: rotate(45deg);
+.tv .body input:nth-child(2):checked + input + input + input + input + .screen + .panel .set .channel span {
+  transform: rotate(60deg);
 }
 .tv .body input:nth-child(3) {
-  left: 535px;
-  top: 70px;
+  transform: rotate(120deg) translate(0px, -28px);
 }
-.tv .body input:nth-child(3):checked + input + .screen .signal {
-  display: block;
+.tv .body input:nth-child(3):checked + input + input + input + .screen .hellokitty {
+  opacity: 1;
 }
-.tv .body input:nth-child(3):checked + input + .screen + .panel .set .channel {
-  transform: rotate(225deg);
+.tv .body input:nth-child(3):checked + input + input + input + .screen + .panel .set .channel span {
+  transform: rotate(120deg);
 }
 .tv .body input:nth-child(4) {
-  left: 570px;
-  top: 70px;
+  transform: rotate(180deg) translate(0px, -28px);
 }
-.tv .body input:nth-child(4):checked + .screen .cctv {
-  display: block;
+.tv .body input:nth-child(4):checked + input + input + .screen .minons {
+  opacity: 1;
 }
-.tv .body input:nth-child(4):checked + .screen + .panel .set .channel {
-  transform: rotate(135deg);
+.tv .body input:nth-child(4):checked + input + input + .screen + .panel .set .channel span {
+  transform: rotate(180deg);
+}
+.tv .body input:nth-child(5) {
+  transform: rotate(240deg) translate(0px, -28px);
+}
+.tv .body input:nth-child(5):checked + input + .screen .chi-bimaruko {
+  opacity: 1;
+}
+.tv .body input:nth-child(5):checked + input + .screen + .panel .set .channel span {
+  transform: rotate(240deg);
+}
+.tv .body input:nth-child(6) {
+  transform: rotate(300deg) translate(0px, -28px);
+}
+.tv .body input:nth-child(6):checked + .screen .bagmax {
+  opacity: 1;
+}
+.tv .body input:nth-child(6):checked + .screen + .panel .set .channel span {
+  transform: rotate(300deg);
 }
 .tv .body .screen {
   width: 445px;
@@ -124,22 +144,13 @@ body {
 }
 .tv .body .panel .set .circle span {
   width: 12px;
-  height: 56px;
+  height: 40px;
   background: #fdfdfd;
   display: block;
   position: absolute;
-  left: 29px;
-  top: 8px;
-}
-.tv .body .panel .set .circle span strong {
-  position: absolute;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  left: 2px;
-  top: 2px;
-  background: #2a2a2a;
+  left: 30px;
+  top: 15px;
+  border-radius: 20px 20px 0 0;
 }
 .tv .body .panel .set .channel {
   width: 70px;
@@ -149,27 +160,54 @@ body {
   position: absolute;
   left: 10px;
   top: 5px;
-  transform: rotate(0);
-  transition: transform 1s;
 }
 .tv .body .panel .set .channel span {
   width: 12px;
-  height: 56px;
+  height: 40px;
   background: #fdfdfd;
   display: block;
   position: absolute;
-  left: 29px;
-  top: 8px;
+  left: 30px;
+  top: 15px;
+  border-radius: 20px 20px 0 0;
 }
-.tv .body .panel .set .channel span strong {
+.tv .body .panel .set .channel ul {
   position: absolute;
-  display: inline-block;
+  left: 32px;
+  top: 31px;
+  z-index: 2;
+}
+.tv .body .panel .set .channel ul li {
   width: 8px;
+  cursor: pointer;
   height: 8px;
   border-radius: 50%;
-  left: 2px;
-  top: 2px;
-  background: #2a2a2a;
+  background: #ddd;
+  position: absolute;
+  transform-origin: center;
+}
+.tv .body .panel .set .channel ul li:nth-child(1) {
+  transform: rotate(0deg) translate(0px, -28px);
+}
+.tv .body .panel .set .channel ul li:nth-child(2) {
+  transform: rotate(60deg) translate(0px, -28px);
+}
+.tv .body .panel .set .channel ul li:nth-child(3) {
+  transform: rotate(120deg) translate(0px, -28px);
+}
+.tv .body .panel .set .channel ul li:nth-child(4) {
+  transform: rotate(180deg) translate(0px, -28px);
+}
+.tv .body .panel .set .channel ul li:nth-child(5) {
+  transform: rotate(240deg) translate(0px, -28px);
+}
+.tv .body .panel .set .channel ul li:nth-child(6) {
+  transform: rotate(300deg) translate(0px, -28px);
+}
+.tv .body .panel .set .channel span {
+  transform: rotate(0);
+  transition: transform 1s;
+  transform-origin: center;
 }
 .tv .body .panel .set .voice {
   width: 70px;
@@ -179,26 +217,19 @@ body {
   position: absolute;
   left: 10px;
   top: 85px;
-  transform: rotate(105deg);
 }
 .tv .body .panel .set .voice span {
   width: 12px;
-  height: 56px;
+  height: 40px;
   background: #fdfdfd;
   display: block;
   position: absolute;
-  left: 29px;
-  top: 8px;
+  left: 30px;
+  top: 15px;
+  border-radius: 20px 20px 0 0;
 }
-.tv .body .panel .set .voice span strong {
-  position: absolute;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  left: 2px;
-  top: 2px;
-  background: #2a2a2a;
+.tv .body .panel .set .voice span {
+  transform: rotate(105deg);
 }
 .tv .body .panel .line {
   width: 116px;
@@ -279,15 +310,30 @@ body {
   position: absolute;
   right: 80px;
 }
-.cctv {
+.ultraman,
+.hellokitty,
+.minons,
+.chi-bimaruko,
+.bagmax,
+.fan {
   width: 450px;
   height: 380px;
   position: absolute;
   background: #fff;
+  opacity: 0;
+  transition: all 1s;
   top: 0;
   left: 0;
   z-index: 2;
-  display: none;
+}
+.ultraman iframe,
+.hellokitty iframe,
+.minons iframe,
+.chi-bimaruko iframe,
+.bagmax iframe,
+.fan iframe {
+  width: 450px;
+  height: 380px;
 }
 .signal {
   display: none;

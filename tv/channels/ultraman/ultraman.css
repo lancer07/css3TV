@@ -1,0 +1,203 @@
+@keyframes jump {
+  0% {
+    background: #48e1e7;
+  }
+  50% {
+    background: #961e1e;
+  }
+  100% {
+    background: #48e1e7;
+  }
+}
+body {
+  background: #75d8f9;
+}
+.ultraman {
+  width: 200px;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  top: 18px;
+  margin-left: -110px;
+}
+.ultraman header {
+  border: 7px solid #000;
+  border-top: 15px solid #000;
+  width: 200px;
+  height: 200px;
+  border-radius: 50% 50% 60% 60%;
+  position: absolute;
+  background: #fff;
+}
+.ultraman header .hair {
+  position: absolute;
+  top: -40px;
+  left: 80px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 140px solid #000;
+  border-radius: 30% 30% 50% 50%;
+}
+.ultraman header .left_eye {
+  border: 5px solid #000;
+  width: 70px;
+  height: 70px;
+  background: #ffc30a;
+  border-radius: 50% 80%;
+  position: absolute;
+  transform: rotate(-15deg);
+  top: 60px;
+  left: 10px;
+}
+.ultraman header .right_eye {
+  border: 5px solid #000;
+  width: 70px;
+  height: 70px;
+  background: #ffc30a;
+  border-radius: 80% 50%;
+  position: absolute;
+  transform: rotate(15deg);
+  top: 60px;
+  right: 10px;
+}
+.ultraman header .left_ear {
+  width: 20px;
+  height: 50px;
+  border: 5px solid #000;
+  position: absolute;
+  top: 70px;
+  z-index: -1;
+  transform: rotate(-7deg);
+  background: #fff;
+  left: -20px;
+}
+.ultraman header .right_ear {
+  width: 20px;
+  height: 50px;
+  border: 5px solid #000;
+  position: absolute;
+  top: 70px;
+  z-index: -1;
+  transform: rotate(7deg);
+  background: #fff;
+  right: -20px;
+}
+.ultraman .body {
+  width: 100px;
+  height: 80px;
+  background: #fff;
+  border: 7px solid #000;
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  border-radius: 0 0 20% 20%;
+  z-index: -1;
+}
+.ultraman .body .light {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #000;
+  position: relative;
+  top: 20px;
+  left: 30px;
+  background: red;
+  transform: rotate(-45deg);
+}
+.ultraman .body .light span {
+  width: 8px;
+  height: 8px;
+  border: 2px solid #000;
+  background: #48e1e7;
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 26px;
+  border-radius: 50%;
+  z-index: 2;
+  animation: jump 0.5s infinite;
+}
+.ultraman .hand {
+  width: 30px;
+  height: 100px;
+  border-radius: 60% 60% 50% 50%;
+  border: 7px solid #000;
+  position: absolute;
+  background: #fff;
+}
+.ultraman .left_hand {
+  width: 30px;
+  height: 100px;
+  border-radius: 60% 60% 50% 50%;
+  border: 7px solid #000;
+  position: absolute;
+  background: #fff;
+  top: 160px;
+  left: 30px;
+}
+.ultraman .right_hand {
+  width: 30px;
+  height: 100px;
+  border-radius: 60% 60% 50% 50%;
+  border: 7px solid #000;
+  position: absolute;
+  background: #fff;
+  top: 160px;
+  left: 90px;
+  transform: rotate(-90deg);
+}
+.ultraman .trousers {
+  border: 7px solid #000;
+  position: absolute;
+  background: red;
+  width: 100px;
+  height: 45px;
+  top: 240px;
+  left: 50px;
+  z-index: -2;
+  border-radius: 0 0 15% 15%;
+}
+.ultraman .footer {
+  width: 34px;
+  height: 80px;
+  border-radius: 50% 50% 60% 60%;
+  border: 7px solid #000;
+  position: absolute;
+  background: #fff;
+  z-index: -3;
+}
+.ultraman .left_footer {
+  width: 34px;
+  height: 80px;
+  border-radius: 50% 50% 60% 60%;
+  border: 7px solid #000;
+  position: absolute;
+  background: #fff;
+  z-index: -3;
+  left: 46px;
+  top: 260px;
+  transform: rotate(20deg);
+}
+.ultraman .right_footer {
+  width: 34px;
+  height: 80px;
+  border-radius: 50% 50% 60% 60%;
+  border: 7px solid #000;
+  position: absolute;
+  background: #fff;
+  z-index: -3;
+  right: 20px;
+  top: 270px;
+  transform: rotate(-50deg);
+}
+.ultraman .egg {
+  background: #75d8f9;
+  width: 18px;
+  height: 30px;
+  top: 286px;
+  left: 97px;
+  position: absolute;
+  border-radius: 50%;
+  border-top: 7px solid #000;
+}
