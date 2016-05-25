@@ -1,0 +1,139 @@
+body {
+  background: #212121;
+}
+.wrap {
+  width: 1234px;
+  height: 600px;
+  border: 5px solid #000;
+  position: relative;
+  margin: 20px auto;
+  background: #fff;
+}
+.wrap .wall {
+  background: #7abac2;
+  width: 1000px;
+  height: 600px;
+  left: 117px;
+  position: absolute;
+  z-index: 1;
+}
+.wrap .floor {
+  width: 1000px;
+  border-bottom: 200px solid #ffe4bf;
+  border-left: 117px solid transparent;
+  border-right: 117px solid transparent;
+  height: 0;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+}
+.wrap .desk {
+  z-index: 2;
+  width: 660px;
+  position: absolute;
+  left: 200px;
+  top: 300px;
+}
+.wrap .desk .top {
+  height: 0;
+  width: 600px;
+  border-bottom: 50px solid #d28632;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+.wrap .desk .front {
+  width: 660px;
+  position: absolute;
+  top: 50px;
+  height: 20px;
+  background: #8a3b10;
+}
+.wrap .desk .footer {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+}
+.wrap .desk .footer_1 {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+  height: 150px;
+  left: 30px;
+  background: #d28632;
+}
+.wrap .desk .footer_2 {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+  height: 150px;
+  right: 30px;
+  background: #d28632;
+}
+.wrap .desk .footer_3 {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+  height: 70px;
+  left: 70px;
+  background: #ba722a;
+}
+.wrap .desk .footer_4 {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+  height: 70px;
+  right: 70px;
+  background: #ba722a;
+}
+.wrap .pic {
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  position: absolute;
+  right: 100px;
+  z-index: 2;
+}
+.wrap .pic .hook {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ef0900;
+  z-index: 4;
+  position: absolute;
+}
+.wrap .pic .line {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 3;
+  left: -38px;
+  top: 20px;
+}
+.wrap .pic .frame {
+  background: #fff;
+  border-top: 10px solid #ffb400;
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  z-index: 4;
+  left: -95px;
+  top: 30px;
+}
+.wrap .pic .frame iframe {
+  width: 200px;
+  height: 150px;
+}
+.wrap .tv {
+  left: 100px;
+  top: 30px;
+  transform: scale(0.5);
+  z-index: 2;
+}
+.wrap #fan {
+  left: 600px;
+  top: 90px;
+  transform: scale(0.6);
+  z-index: 2;
+}
