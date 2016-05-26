@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Brush";
+  src: url("../font/BrushScriptMTItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background: #212121;
 }
@@ -10,16 +16,42 @@ body {
   background: #fff;
 }
 .wrap .wall {
-  background: #7abac2;
   width: 1000px;
-  height: 600px;
+  height: 500px;
   left: 117px;
   position: absolute;
   z-index: 1;
 }
+.wrap .wall li {
+  width: 4%;
+  float: left;
+  height: 500px;
+}
+.wrap .wall li:nth-child(2n) {
+  background: #ffc8e5;
+}
+.wrap .wall li:nth-child(2n+1) {
+  background: #ffe3f1;
+}
+.wrap .wall:before {
+  content: "";
+  position: absolute;
+  width: 117px;
+  height: 600px;
+  background: #ffc8e5;
+  left: -117px;
+}
+.wrap .wall:after {
+  content: "";
+  position: absolute;
+  width: 117px;
+  height: 600px;
+  background: #ffc8e5;
+  right: -117px;
+}
 .wrap .floor {
   width: 1000px;
-  border-bottom: 200px solid #ffe4bf;
+  border-bottom: 130px solid #f0f0f0;
   border-left: 117px solid transparent;
   border-right: 117px solid transparent;
   height: 0;
@@ -29,20 +61,20 @@ body {
 }
 .wrap .desk {
   z-index: 2;
-  width: 660px;
+  width: 760px;
   position: absolute;
-  left: 200px;
-  top: 300px;
+  left: 150px;
+  top: 360px;
 }
 .wrap .desk .top {
   height: 0;
-  width: 600px;
+  width: 700px;
   border-bottom: 50px solid #d28632;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
 }
 .wrap .desk .front {
-  width: 660px;
+  width: 760px;
   position: absolute;
   top: 50px;
   height: 20px;
@@ -112,28 +144,29 @@ body {
   top: 20px;
 }
 .wrap .pic .frame {
+  border: 15px solid #f7f5dc;
+  outline: 5px solid #000;
   background: #fff;
-  border-top: 10px solid #ffb400;
-  width: 200px;
-  height: 150px;
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Brush Script MT", Brush;
   position: absolute;
   z-index: 4;
-  left: -95px;
+  left: -100px;
   top: 30px;
-}
-.wrap .pic .frame iframe {
-  width: 200px;
-  height: 150px;
 }
 .wrap .tv {
   left: 100px;
-  top: 30px;
-  transform: scale(0.5);
+  top: 0;
+  transform: scale(0.65);
   z-index: 2;
 }
 .wrap #fan {
-  left: 600px;
-  top: 90px;
+  left: 650px;
+  top: 150px;
   transform: scale(0.6);
   z-index: 2;
 }

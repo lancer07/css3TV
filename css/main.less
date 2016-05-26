@@ -1,4 +1,14 @@
 //out : main.css
+
+@font-face {
+    font-family: "Brush";
+    src: url("../font/BrushScriptMTItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 body{
     background: #212121;
 }
@@ -10,16 +20,42 @@ body{
     margin: 20px auto;
     background: #fff;
     .wall{
-        background: #7abac2;
         width: 1000px;
-        height: 600px;
+        height: 500px;
         left: 117px;
         position: absolute;
         z-index: 1;
+        li{
+            width: 4%;
+            float: left;
+            height: 500px;
+            &:nth-child(2n){
+                background: #ffc8e5;
+            }
+            &:nth-child(2n+1){
+                background: #ffe3f1;
+            }
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            width:117px;
+            height: 600px;
+            background: #ffc8e5;
+            left: -117px;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            width:117px;
+            height: 600px;
+            background: #ffc8e5;
+            right: -117px;
+        }
     }
     .floor{
         width: 1000px;
-        border-bottom: 200px solid #ffe4bf;
+        border-bottom: 130px solid #f0f0f0;
         border-left: 117px solid transparent;
         border-right: 117px solid transparent;
         height: 0;
@@ -29,19 +65,19 @@ body{
     }
     .desk{
         z-index: 2;
-        width: 660px;
+        width: 760px;
         position: absolute;
-        left: 200px;
-        top: 300px;
+        left: 150px;
+        top: 360px;
         .top{
             height: 0;
-            width: 600px;
+            width: 700px;
             border-bottom: 50px solid #d28632;
             border-left: 30px solid transparent;
             border-right: 30px solid transparent;
         }
         .front{
-            width: 660px;
+            width: 760px;
             position: absolute;
             top: 50px;
             height: 20px;
@@ -104,28 +140,30 @@ body{
         }
         .frame{
             background: #fff;
-            border-top: 10px solid #ffb400;
-            width: 200px;
-            height: 150px;
+            border: 15px solid #f7f5dc;
+            outline:5px solid #000;
+            background: #fff;
+            width: 180px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 30px;
+            font-family: "Brush Script MT",Brush;
             position: absolute;
             z-index: 4;
-            left: -95px;
+            left: -100px;
             top: 30px;
-            iframe{
-                width: 200px;
-                height:150px;
-            }
         }
     }
     .tv{
         left: 100px;
-        top: 30px;
-        transform: scale(0.5);
+        top: 0;
+        transform: scale(0.65);
         z-index: 2;
     }
     #fan{
-        left: 600px;
-        top: 90px;
+        left: 650px;
+        top: 150px;
         transform: scale(0.6);
         z-index: 2;
     }
