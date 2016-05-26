@@ -6,14 +6,9 @@
     transform: rotate(360deg);
   }
 }
-body {
-  background: #e5f3f4;
-}
 #fan {
   width: 230px;
   position: absolute;
-  top: 325px;
-  left: 750px;
   z-index: 10;
 }
 #fan .header {

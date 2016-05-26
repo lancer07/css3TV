@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Brush";
+  src: url("../font/BrushScriptMTItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: #212121;
+}
+.wrap {
+  width: 1234px;
+  height: 600px;
+  border: 5px solid #000;
+  position: relative;
+  margin: 20px auto;
+  background: #fff;
+}
+.wrap .wall {
+  width: 1000px;
+  height: 500px;
+  left: 117px;
+  position: absolute;
+  z-index: 1;
+}
+.wrap .wall li {
+  width: 4%;
+  float: left;
+  height: 500px;
+}
+.wrap .wall li:nth-child(2n) {
+  background: #ffc8e5;
+}
+.wrap .wall li:nth-child(2n+1) {
+  background: #ffe3f1;
+}
+.wrap .wall:before {
+  content: "";
+  position: absolute;
+  width: 117px;
+  height: 600px;
+  background: #ffc8e5;
+  left: -117px;
+}
+.wrap .wall:after {
+  content: "";
+  position: absolute;
+  width: 117px;
+  height: 600px;
+  background: #ffc8e5;
+  right: -117px;
+}
+.wrap .floor {
+  width: 1000px;
+  border-bottom: 130px solid #f0f0f0;
+  border-left: 117px solid transparent;
+  border-right: 117px solid transparent;
+  height: 0;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+}
+.wrap .desk {
+  z-index: 2;
+  width: 760px;
+  position: absolute;
+  left: 150px;
+  top: 360px;
+}
+.wrap .desk .top {
+  height: 0;
+  width: 700px;
+  border-bottom: 50px solid #d28632;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+.wrap .desk .front {
+  width: 760px;
+  position: absolute;
+  top: 50px;
+  height: 20px;
+  background: #8a3b10;
+}
+.wrap .desk .footer {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+}
+.wrap .desk .footer_1 {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+  height: 150px;
+  left: 30px;
+  background: #d28632;
+}
+.wrap .desk .footer_2 {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+  height: 150px;
+  right: 30px;
+  background: #d28632;
+}
+.wrap .desk .footer_3 {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+  height: 70px;
+  left: 70px;
+  background: #ba722a;
+}
+.wrap .desk .footer_4 {
+  position: absolute;
+  width: 24px;
+  top: 70px;
+  height: 70px;
+  right: 70px;
+  background: #ba722a;
+}
+.wrap .pic {
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  position: absolute;
+  right: 100px;
+  z-index: 2;
+}
+.wrap .pic .hook {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ef0900;
+  z-index: 4;
+  position: absolute;
+}
+.wrap .pic .line {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 3;
+  left: -38px;
+  top: 20px;
+}
+.wrap .pic .frame {
+  border: 15px solid #f7f5dc;
+  outline: 5px solid #000;
+  background: #fff;
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Brush Script MT", Brush;
+  position: absolute;
+  z-index: 4;
+  left: -100px;
+  top: 30px;
+}
+.wrap .tv {
+  left: 100px;
+  top: 0;
+  transform: scale(0.65);
+  z-index: 2;
+}
+.wrap #fan {
+  left: 650px;
+  top: 150px;
+  transform: scale(0.6);
+  z-index: 2;
+}

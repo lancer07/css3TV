@@ -27,7 +27,7 @@ div {
 .main {
   position: relative;
   margin: 0 auto;
-  transform: scale(0.5, 0.5);
+  transform: scale(0.6, 0.6);
   top: 10px;
 }
 .me {
