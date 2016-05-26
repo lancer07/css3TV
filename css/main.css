@@ -172,3 +172,11 @@ body {
   transform: scale(0.6);
   z-index: 2;
 }
+.footer {
+  text-align: center;
+  color: #999;
+}
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
